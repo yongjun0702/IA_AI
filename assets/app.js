@@ -34,12 +34,38 @@ window.addEventListener('scroll', () => {
         }
     });
 
-    // Reset typewriter animation when scrolled to the top
+    // typewriter animation 초기화
     if (scrollPosition === 0) {
         typewriter.style.animation = 'none';
         setTimeout(() => {
             typewriter.style.animation = '';
-        }, 10);  // Small delay to allow resetting
+        }, 10);  
+    }
+});
+
+// 모달 팝업 기능 추가
+const modal = document.getElementById('modal');
+const modalText = document.getElementById('modal-text');
+const modalImage = document.getElementById('modal-image');
+const closeModal = document.querySelector('.close');
+
+document.querySelectorAll('.locker-card').forEach(card => {
+    card.addEventListener('click', () => {
+        const lockerInfo = card.getAttribute('data-locker-info');
+        const lockerImage = card.querySelector('img').src;
+        modalText.textContent = lockerInfo;
+        modalImage.src = lockerImage;
+        modal.style.display = 'block';
+    });
+});
+
+closeModal.addEventListener('click', () => {
+    modal.style.display = 'none';
+});
+
+window.addEventListener('click', (event) => {
+    if (event.target == modal) {
+        modal.style.display = 'none';
     }
 });
 

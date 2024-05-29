@@ -70,7 +70,6 @@
                 <h3>PH층</h3>
                 <p>종합운동장 / 제1•2학생생활관</p>
             </div>
-            <!-- 추가적인 층 카드들 -->
         </div>
     </section>
     <section id="lounge" class="content-section">
@@ -115,28 +114,38 @@
         <h2>사물함 위치</h2>
         <p>AI•소프트웨어학부의 사물함 위치, 알려드려요.</p>
         <div class="card-container">
-        <div class="locker-card" onclick="location.href='./pages/floor1.html'">
-            <img src="assets/img/locker.png">
-            <h3>1 ~ 234번</h3>
-            <p>410호 앞</p>
-        </div>
-        <div class="locker-card" onclick="location.href='./pages/floor1.html'">
-            <img src="assets/img/locker.png">
-            <h3>235 ~ 270번</h3>
-            <p>4층 엘리베이터 앞 3단 사물함</p>
-        </div>
-        <div class="locker-card" onclick="location.href='./pages/floor1.html'">
-            <img src="assets/img/locker.png">
-            <h3>271 ~ 312번</h3>
-            <p>4층 엘리베이터 앞 2단 사물함</p>
-        </div>
-        <div class="locker-card" onclick="location.href='./pages/floor1.html'">
-            <img src="assets/img/locker.png">
-            <h3>313 ~ 315번</h3>
-            <p>415호 앞</p>
-        </div>
+            <div class="locker-card" data-locker-info="1 ~ 234번 사물함 위치는 410호 앞입니다.">
+                <img src="assets/img/locker.png">
+                <h3>1 ~ 234번</h3>
+                <p>410호 앞</p>
+            </div>
+            <div class="locker-card" data-locker-info="235 ~ 270번 사물함 위치는 4층 엘리베이터 앞 3단 사물함입니다.">
+                <img src="assets/img/locker.png">
+                <h3>235 ~ 270번</h3>
+                <p>4층 엘리베이터 앞 3단 사물함</p>
+            </div>
+            <div class="locker-card" data-locker-info="271 ~ 312번 사물함 위치는 4층 엘리베이터 앞 2단 사물함입니다.">
+                <img src="assets/img/locker.png">
+                <h3>271 ~ 312번</h3>
+                <p>4층 엘리베이터 앞 2단 사물함</p>
+            </div>
+            <div class="locker-card" data-locker-info="313 ~ 315번 사물함 위치는 415호 앞입니다.">
+                <img src="assets/img/locker.png">
+                <h3>313 ~ 315번</h3>
+                <p>415호 앞</p>
+            </div>
         </div>
     </section>
+
+    <!-- Modal 구조 추가 -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img id="modal-image" src="" alt="Locker Image">
+            <p id="modal-text"></p>
+        </div>
+    </div>
+    
     <footer style="margin-left: 10px;">
         <p>&copy; 2024 가천대학교 IA_AI</p>
     </footer>
