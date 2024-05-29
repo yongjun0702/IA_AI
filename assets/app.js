@@ -2,6 +2,7 @@ window.addEventListener('scroll', () => {
     const header = document.querySelector('header');
     const sections = document.querySelectorAll('.content-section');
     const cards = document.querySelectorAll('.card');
+    const typewriter = document.querySelector('.typewriter');
 
     const scrollPosition = window.scrollY;
     const windowHeight = window.innerHeight;
@@ -13,6 +14,9 @@ window.addEventListener('scroll', () => {
         if (scrollPosition >= sectionTop - windowHeight + sectionHeight / 4) {
             section.style.opacity = '1';
             section.style.transform = 'translateY(0)';
+        } else {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(20px)';
         }
     });
 
@@ -21,7 +25,6 @@ window.addEventListener('scroll', () => {
         const cardHeight = card.offsetHeight;
 
         if (scrollPosition >= cardTop - windowHeight + cardHeight / 2) {
-            // card.style.transitionDelay = `${index * 0.2}s`;
             card.style.opacity = '1';
             card.style.transform = 'translateY(0)';
         } else {
@@ -30,24 +33,30 @@ window.addEventListener('scroll', () => {
             card.style.transform = 'translateY(50px)';
         }
     });
+
+    // Reset typewriter animation when scrolled to the top
+    if (scrollPosition === 0) {
+        typewriter.style.animation = 'none';
+        setTimeout(() => {
+            typewriter.style.animation = '';
+        }, 10);  // Small delay to allow resetting
+    }
 });
 
 const swiftUpElements = document.querySelectorAll('.swift-up-text');
 
 swiftUpElements.forEach(elem => {
+    const words = elem.textContent.split(' ');
+    elem.innerHTML = '';
 
-	const words = elem.textContent.split(' ');
-	elem.innerHTML = '';
+    words.forEach((el, index) => {
+        words[index] = `<span><i>${words[index]}</i></span>`;
+    });
 
-	words.forEach((el, index) => {
-		words[index] = `<span><i>${words[index]}</i></span>`;
-	});
+    elem.innerHTML = words.join(' ');
 
-	elem.innerHTML = words.join(' ');
-
-	const children = document.querySelectorAll('span > i');
-	children.forEach((node, index) => {
-		node.style.animationDelay = `${index * .2}s`;
-	});
-
+    const children = document.querySelectorAll('span > i');
+    children.forEach((node, index) => {
+        node.style.animationDelay = `${index * .2}s`;
+    });
 });
