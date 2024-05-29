@@ -21,7 +21,7 @@ window.addEventListener('scroll', () => {
         const cardHeight = card.offsetHeight;
 
         if (scrollPosition >= cardTop - windowHeight + cardHeight / 2) {
-            card.style.transitionDelay = `${index * 0.2}s`;
+            // card.style.transitionDelay = `${index * 0.2}s`;
             card.style.opacity = '1';
             card.style.transform = 'translateY(0)';
         } else {
