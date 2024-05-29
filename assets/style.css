@@ -1,0 +1,233 @@
+body {
+    font-family: 'Pretendard', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: whitesmoke;
+}
+
+header {
+    position: relative;
+    height: 65vh;
+    overflow: hidden;
+    color: white;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15vh;
+    font-size: clamp(2.7rem, 2.8vw, 5rem);
+    font-weight: bold;
+}
+
+.typewriter {
+    width: 21.5ch;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 4px solid #212121;
+    animation: cursor 1s step-start infinite, text 3s steps(18) alternate;
+}
+
+@keyframes cursor {
+    0%, 100% { 
+      border-color: #212121; 
+    }
+}
+
+@keyframes text {
+    0% { 
+      width: 0; 
+    }
+    100% { 
+      width: 21.5ch; 
+    }
+}
+
+.title {
+    position: absolute;
+    top: 7%;
+    left: 15%;
+    transform: translate(-50%, -100%);
+    z-index: 1;
+    opacity: 0;
+    animation: fadeInText 2s forwards;
+}
+
+.title-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90%;
+    object-fit: cover;
+    filter: brightness(30%);
+    opacity: 0;
+    animation: fadeInImage 2s forwards;
+}
+
+.title-text {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    z-index: 1;
+    opacity: 0;
+    animation: fadeInText 2s forwards;
+}
+
+.title-text h1 {
+    white-space: nowrap;
+    font-size: 3em;
+    margin: 0;
+    font-weight: 700;
+}
+.title-text h3 {
+    white-space: nowrap;
+    font-size: 1em;
+    margin: 0;
+    font-weight: 700;
+    color: lightskyblue;
+}
+  
+.content-section {
+    padding: 80px 20px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.content-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.1s ease-in, box-shadow 0.1s ease-in;  /* Adjusted transition speed */
+    cursor: pointer;
+    width: 250px;
+    position: relative; 
+    overflow: hidden; 
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.card h3 {
+    font-weight: 700;
+}
+
+.locker-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.1s ease-in, box-shadow 0.1s ease-in;  /* Adjusted transition speed */
+    cursor: pointer;
+    width: 250px;
+    height: 350px;
+    position: relative; 
+    overflow: hidden; 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.locker-card img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.locker-card h3 {
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    text-align: center;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.locker-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes fadeInImage {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInText {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+@media (max-width: 768px) {
+    .title-text h1 {
+        font-size: 2.5em;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .card {
+        width: 100%;
+        margin: 10px 0;
+    }
+    .locker-card {
+        width: calc(100% - 20px);
+        margin: 10px 0;
+        height: auto;
+    }
+}
+
+@media (max-width: 1200px) {
+    .locker-card {
+        width: calc(50% - 20px);
+    }
+}
