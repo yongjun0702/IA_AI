@@ -1,46 +1,104 @@
-/* page_style.css */
-
 body {
+    font-family: 'Pretendard', sans-serif;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    background-color: whitesmoke;
 }
 
 header {
     position: relative;
-    height: 300px; /* 적절한 높이 조정 */
+    height: 45vh;
+    overflow: hidden;
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-.floor-image {
+.header-image {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
+    filter: brightness(40%);
 }
 
-.floor-title {
+.header-text {
     position: absolute;
-    bottom: 20px;
-    left: 20px;
+    bottom: 10%;
+    left: 5%;
+    transform: translateY(-50%);
+    z-index: 1;
+    text-align: left;
+}
+
+.header-text h1 {
+    font-size: 3em;
     margin: 0;
+    font-weight: 700;
     color: white;
-    font-size: 2em;
 }
 
-main {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 50px 0;
+.header-text h3 {
+    font-size: 1.5em;
+    margin: 0;
+    font-weight: 400;
+    color: lightgray;
 }
 
-.facility-card-left img,
-.facility-card-right img {
-    width: 300px; /* 이미지 너비 조정 */
-    height: auto; /* 이미지 높이 자동 조정 */
-    border-radius: 10px;
-}
-
-.facility-card-left p,
-.facility-card-right p {
-    margin-top: 20px;
+.content-section {
+    padding: 40px 20px;
     text-align: center;
+}
+
+.facility {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.facility img {
+    width: 35%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-right: 10px;
+    margin-left: 10px; 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.facility-text {
+    flex: 1;
+    text-align: left;
+    margin-right: 10px; 
+    margin-left: 10px; 
+    margin-top: 10px;
+}
+.facility-text h3{
+    font-size: 2em;
+    margin: 0;
+    font-weight: 700;
+    color: black;
+}
+
+.facility:nth-child(even) img {
+    order: 1; 
+}
+
+@media (max-width: 768px) {
+    .facility img {
+        width: 100%;
+        margin: 0 0 10px 0;
+    }
+
+    .facility:nth-child(even) img {
+        order: unset; 
+    }
+
+    .facility-text {
+        margin-right: 0; 
+        margin-left: 0; 
+    }
 }
