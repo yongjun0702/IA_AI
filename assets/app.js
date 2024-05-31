@@ -2,6 +2,7 @@ window.addEventListener('scroll', () => {
     const header = document.querySelector('header');
     const sections = document.querySelectorAll('.content-section');
     const cards = document.querySelectorAll('.card');
+    const loungeCards = document.querySelectorAll('.lounge-card'); // Added lounge-cards selection
     const typewriter = document.querySelector('.typewriter');
 
     const scrollPosition = window.scrollY;
@@ -11,7 +12,7 @@ window.addEventListener('scroll', () => {
         const sectionTop = section.offsetTop;
         const sectionHeight = section.offsetHeight;
 
-        if (scrollPosition >= sectionTop - windowHeight + sectionHeight / 4) {
+        if (scrollPosition >= sectionTop - windowHeight + sectionHeight / 7.5) {
             section.style.opacity = '1';
             section.style.transform = 'translateY(0)';
         } else {
@@ -24,7 +25,7 @@ window.addEventListener('scroll', () => {
         const cardTop = card.offsetTop;
         const cardHeight = card.offsetHeight;
 
-        if (scrollPosition >= cardTop - windowHeight + cardHeight / 2) {
+        if (scrollPosition >= cardTop - windowHeight + cardHeight / 7.5) {
             card.style.opacity = '1';
             card.style.transform = 'translateY(0)';
         } else {
@@ -33,6 +34,22 @@ window.addEventListener('scroll', () => {
             card.style.transform = 'translateY(50px)';
         }
     });
+
+    loungeCards.forEach((card, index) => { // Added block for lounge-cards
+        const cardTop = card.offsetTop;
+        const cardHeight = card.offsetHeight;
+
+        if (scrollPosition >= cardTop - windowHeight + cardHeight / 7.5) {
+            card.style.opacity = '1';
+            card.style.transform = 'translateY(0)';
+        } else {
+            card.style.transitionDelay = '0s';
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(50px)';
+        }
+    });
+
+    
 
     // typewriter animation 초기화
     if (scrollPosition === 0) {
@@ -59,6 +76,16 @@ document.querySelectorAll('.locker-card').forEach(card => {
     });
 });
 
+document.querySelectorAll('.lounge-card').forEach(card => {
+    card.addEventListener('click', () => {
+        const loungeInfo = card.getAttribute('data-lounge-info'); // Fixed variable name
+        const loungeImage = card.querySelector('img').src; // Fixed variable name
+        modalText.textContent = loungeInfo; // Fixed variable name
+        modalImage.src = loungeImage; // Fixed variable name
+        modal.style.display = 'block';
+    });
+});
+
 closeModal.addEventListener('click', () => {
     modal.style.display = 'none';
 });
@@ -68,6 +95,7 @@ window.addEventListener('click', (event) => {
         modal.style.display = 'none';
     }
 });
+
 
 const swiftUpElements = document.querySelectorAll('.swift-up-text');
 

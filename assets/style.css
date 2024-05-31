@@ -52,6 +52,9 @@ a {
     text-decoration: none;
     color: white;
 }
+p {
+    margin-top: 5px;
+}
 
 .title {
     position: absolute;
@@ -110,8 +113,8 @@ a {
     border: 2px solid #333;
     border-radius: 50%;
     position: relative;
-    animation: down 1.5s infinite;
-    -webkit-animation: down 1.5s infinite;
+    animation: down 1.3s infinite;
+    -webkit-animation: down 1.3s infinite;
     &::before {
       content: '';
       position: absolute;
@@ -130,7 +133,7 @@ a {
       transform: translate(0);
     }
     20% {
-      transform: translateY(15px);
+      transform: translateY(17px);
     }
     40% {
       transform: translate(0);
@@ -142,7 +145,7 @@ a {
       transform: translate(0);
     }
     20% {
-      transform: translateY(15px);
+      transform: translateY(17px);
     }
     40% {
       transform: translate(0);
@@ -196,6 +199,33 @@ a {
 }
 
 .card h3 {
+    font-weight: 700;
+}
+.lounge-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.1s ease-in, box-shadow 0.1s ease-in;  /* Adjusted transition speed */
+    cursor: pointer;
+    width: 250px;
+    position: relative; 
+    overflow: hidden; 
+}
+
+.lounge-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.lounge-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.lounge-card h3 {
     font-weight: 700;
 }
 
@@ -335,6 +365,10 @@ a {
         width: 100%;
         margin: 10px 0;
     }
+    .lounge-card {
+        width: 100%;
+        margin: 10px 0;
+    }
     .locker-card {
         width: calc(100% - 20px);
         margin: 10px 0;
@@ -345,5 +379,70 @@ a {
 @media (max-width: 1200px) {
     .locker-card {
         width: calc(50% - 20px);
+    }
+}
+
+
+
+.route {
+    margin-left: 120px;
+    margin-right: 120px;
+    margin-top: 90px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center; 
+}
+
+.route img {
+    width: 35%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-right: 90px;
+    margin-left: 90px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.route-text {
+    flex: 1;
+    text-align: left;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.route-text h3 {
+    font-size: 2em;
+    margin: 10;
+    font-weight: 700;
+    color: black;
+}
+.route-text p {
+    font-size: 1em;
+    margin: 0;
+    color: black;
+}
+
+@media (max-width: 768px) {
+    .route {
+        flex-direction: column; 
+        align-items: center; 
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .route img {
+        width: 80%; 
+        margin-right: 0;
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .route-text {
+        font-size: 0.8em;
+        text-align: center;
+        margin-right: 0; 
+        margin-left: 0;
     }
 }

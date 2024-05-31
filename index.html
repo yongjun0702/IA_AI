@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>가천대학교 AI공학관</title>
-    <link rel="stylesheet" href="assets/style.css">
+    <title>IT융합대학 학부생을 위한 길잡이</title>
+    <link rel="stylesheet" type="text/css" href="assets/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;700&display=swap" rel="stylesheet">
@@ -82,38 +82,38 @@
         <h2>학습 라운지</h2>
         <p>자유롭게 공부할 수 있는 공간, 알려드려요</p>
         <div class="card-container">
-        <div class="card" onclick="location.href='./pages/floor1.html'">
-            <img src="assets/img/lounge1.jpg">
-            <h3>[2층] 아르테크네 스페이스</h3>
-        </div>
-        <div class="card" onclick="location.href='./pages/floor1.html'">
-            <img src="assets/img/lounge2.jpg">
-            <h3>[4층] 아르테크네 스페이스</h3>
-        </div>
-        <div class="card" onclick="location.href='./pages/floor1.html'">
-            <img src="assets/img/lounge2.jpg">
-            <h3>[5층] 아르테크네 스페이스</h3>
-        </div>
-        <div class="card" onclick="location.href='./pages/floor1.html'">
-            <img src="assets/img/lounge2.jpg">
-            <h3>[7층] 아르테크네 스페이스</h3>
-        </div>
-        <div class="card" onclick="location.href='./pages/floor1.html'">
-            <img src="assets/img/floor5_cube.jpg">
-            <h3>[5층] 큐브</h3>
-        </div>
-        <div class="card" onclick="location.href='./pages/floor1.html'">
-            <img src="assets/img/floor4_incubator.jpg">
-            <h3>[403-B] 메타버스 인큐베이터</h3>
-        </div>
-        <div class="card" onclick="location.href='./pages/floor1.html'">
-            <img src="assets/img/floor4_incubator.jpg">
-            <h3>[404] 메타버스 인큐베이터</h3>
-        </div>
-        <div class="card" onclick="location.href='./pages/floor1.html'">
-            <img src="assets/img/floor4_incubator.jpg">
-            <h3>[405] 메타버스 인큐베이터</h3>
-        </div>
+            <div class="lounge-card" data-lounge-info="2층 엘리베이터 앞에 아르테크네 스페이스가 위치하고 있습니다.">
+                <img src="assets/img/lounge1.jpg">
+                <h3>[2층] 아르테크네 스페이스</h3>
+            </div>
+            <div class="lounge-card" data-lounge-info="3층 엘리베이터 앞에 아르테크네 스페이스가 위치하고 있습니다.">
+                <img src="assets/img/lounge2.jpg">
+                <h3>[3층] 아르테크네 스페이스</h3>
+            </div>
+            <div class="lounge-card" data-lounge-info="5층 엘리베이터 앞에 아르테크네 스페이스가 위치하고 있습니다.">
+                <img src="assets/img/lounge2.jpg">
+                <h3>[5층] 아르테크네 스페이스</h3>
+            </div>
+            <div class="lounge-card" data-lounge-info="7층 엘리베이터 앞에 아르테크네 스페이스가 위치하고 있습니다.">
+                <img src="assets/img/lounge2.jpg">
+                <h3>[7층] 아르테크네 스페이스</h3>
+            </div>
+            <div class="lounge-card" data-lounge-info="5층 중앙에 큐브가 위치해있습니다. 팀플을 하거나 누워서 잠을 잘 수도 있습니다.">
+                <img src="assets/img/floor5_cube.jpg">
+                <h3>[5층] 큐브</h3>
+            </div>
+            <div class="lounge-card" data-lounge-info="4층에 메타버스 인큐베이터가 위치해있습니다. 공부할 수 있는 테이블과 스터디룸이 있습니다. 스터디룸은 예약이 필요합니다.">
+                <img src="assets/img/floor4_incubator.jpg">
+                <h3>[403-B] 메타버스 인큐베이터</h3>
+            </div>
+            <div class="lounge-card" data-lounge-info="4층에 메타버스 인큐베이터가 위치해있습니다. 공부할 수 있는 테이블과 스터디룸이 있습니다. 스터디룸은 예약이 필요합니다.">
+                <img src="assets/img/floor4_incubator.jpg">
+                <h3>[404] 메타버스 인큐베이터</h3>
+            </div>
+            <div class="lounge-card" data-lounge-info="4층에 메타버스 인큐베이터가 위치해있습니다. 공부할 수 있는 테이블과 스터디룸이 있습니다. 스터디룸은 예약이 필요합니다.">
+                <img src="assets/img/floor4_incubator.jpg">
+                <h3>[405] 메타버스 인큐베이터</h3>
+            </div>
         </div>
     </section>
     <section id="locker" class="content-section">
@@ -142,12 +142,33 @@
             </div>
         </div>
     </section>
+    <section id="route" class="content-section">
+        <h2>AI공학관 오는 길</h2>
+        <p>캠퍼스의 가장 끝, 효율적으로 알려드려요.</p>
+        <div class="route">
+            <img src="assets/img/moodang.png" alt="">
+            <div class="route-text">
+                <h3>교내 에코버스 무당이</h3>
+                <p>반도체대학 탑승 → 학생 생활관(AI공학관 옥상) <br>운영시간 : 08:30 ~ 17:30 <br> 배차간격 : 5~10분<br>
+                    반도체대학 → 학생 생활관, 학생 생활관 → 반도체대학 동시출발</p>
+                    <h4>방학, 우천시 미운영 <br>점심시간 대형 버스 운영</h4>
+            </div>
+        </div>
+        <div class="route">
+            <img src="assets/img/route.jpg" alt="">
+            <div class="route-text">
+                <h3>복정동 뒷길</h3>
+                <p>복정동 뒷길을 통해 큰 언덕 없이 AI공학관에 도착할 수 있습니다.</p>
+                    <h4>비포장길, 우천시 위험</h4>
+            </div>
+        </div>
+    </section>
 
     <!-- Modal 구조 추가 -->
     <div id="modal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
-            <img id="modal-image" src="" alt="Locker Image">
+            <img id="modal-image" src="" alt="">
             <p id="modal-text"></p>
         </div>
     </div>
