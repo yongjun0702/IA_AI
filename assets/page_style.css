@@ -25,6 +25,28 @@ header {
     filter: brightness(40%);
 }
 
+.header-back-btn {
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    transform: translateY(-50%);
+    z-index: 1;
+    width: 40px;
+    height: 40px;
+    border: none;
+    font-size: 20px;
+    border-radius: 10px;
+    color: white;
+    background-color: transparent;
+    cursor: pointer;
+}
+.header-back-btn:hover {
+    background-color: rgb(116, 116, 116);
+}
+header > a {
+    color: white;
+}
+
 .header-text {
     position: absolute;
     bottom: 10%;
