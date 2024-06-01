@@ -39,12 +39,18 @@ header {
     color: white;
     background-color: transparent;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3px;
 }
+
+.header-back-btn>img {
+    width: 30px;
+}
+
 .header-back-btn:hover {
     background-color: rgb(116, 116, 116);
-}
-header > a {
-    color: white;
 }
 
 .header-text {
@@ -88,18 +94,19 @@ header > a {
     border-radius: 10px;
     object-fit: cover;
     margin-right: 10px;
-    margin-left: 10px; 
+    margin-left: 10px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
 .facility-text {
     flex: 1;
     text-align: left;
-    margin-right: 10px; 
-    margin-left: 10px; 
+    margin-right: 10px;
+    margin-left: 10px;
     margin-top: 10px;
 }
-.facility-text h3{
+
+.facility-text h3 {
     font-size: 2em;
     margin: 0;
     font-weight: 700;
@@ -107,7 +114,7 @@ header > a {
 }
 
 .facility:nth-child(even) img {
-    order: 1; 
+    order: 1;
 }
 
 @media (max-width: 768px) {
@@ -117,11 +124,11 @@ header > a {
     }
 
     .facility:nth-child(even) img {
-        order: unset; 
+        order: unset;
     }
 
     .facility-text {
-        margin-right: 0; 
-        margin-left: 0; 
+        margin-right: 0;
+        margin-left: 0;
     }
 }
