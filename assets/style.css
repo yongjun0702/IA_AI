@@ -191,6 +191,63 @@ p {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
+.search-area {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 1000px;
+    position: relative; 
+    overflow: hidden; 
+}
+
+#searchInput {
+    background-color: #f2f2f2;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 16px;
+    outline: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#searchInput:focus {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#results a {
+    color: black;
+}
+
+#results > li > a:hover {
+    text-decoration: underline;
+}
+
+#results li {
+    text-align: left;
+}
+
+#results > li > ul {
+    margin-top: 6px;
+    padding-left: 30px;
+}
+#results > li > ul > li {
+    margin-top: 6px;
+}
+#results > li > ul > li:nth-child(1) {
+    margin-top: 0;
+}
+#search > .route {
+    margin-top: 20px;
+    margin-left: 120px;
+    margin-right: 120px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center; 
+}
+
 .card img {
     width: 100%;
     height: auto;
