@@ -481,7 +481,7 @@ p {
     color: black;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
     .route {
         flex-direction: column; 
         align-items: center; 
@@ -497,7 +497,7 @@ p {
     }
 
     .route-text {
-        font-size: 0.8em;
+        font-size: 1em;
         text-align: center;
         margin-right: 0; 
         margin-left: 0;
