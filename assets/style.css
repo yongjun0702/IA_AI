@@ -482,7 +482,7 @@ p {
 }
 
 @media (max-width: 1200px) {
-    .route {
+    .route.except {
         flex-direction: column; 
         align-items: center; 
         margin-left: 10px;
@@ -490,7 +490,7 @@ p {
     }
 
     .route img {
-        width: 80%; 
+        width: 80%;
         margin-right: 0;
         margin-left: 0;
         margin-bottom: 10px;
@@ -501,5 +501,13 @@ p {
         text-align: center;
         margin-right: 0; 
         margin-left: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .route {
+        align-items: center;
+        margin-left: 10px;
+        margin-right: 10px;
     }
 }
