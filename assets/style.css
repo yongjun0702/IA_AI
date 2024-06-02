@@ -15,6 +15,11 @@ header {
     margin-bottom: 0;
 }
 
+/* 검색어 결과 부분 강조 */
+.highlight {
+    background-color: yellow;
+    font-weight: bold;
+}
 
 .container {
     display: flex;
