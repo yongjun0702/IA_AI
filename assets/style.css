@@ -519,3 +519,21 @@ p {
         margin-right: 10px;
     }
 }
+
+
+.copyright-footer{
+	padding-top: 3rem !important;
+	padding-bottom: 3rem !important;
+	background-color: blalck !important;
+}
+
+.copyright-div{
+	padding-right: 3rem !important;
+	padding-left: 3rem !important;
+}
+
+.copyright-p{
+	margin: 0 !important;
+	text-align: center !important;
+	color: white !important;
+}
