@@ -247,6 +247,9 @@ p {
     align-items: center;
     justify-content: center; 
 }
+#results > li {
+    margin-top: 8px;
+}
 
 .card img {
     width: 100%;
@@ -504,8 +507,8 @@ p {
     }
 }
 
-@media (max-width: 768px) {
-    .route {
+@media (max-width: 1050px) {
+    #search > .route {
         align-items: center;
         margin-left: 10px;
         margin-right: 10px;
