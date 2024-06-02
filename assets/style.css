@@ -547,3 +547,13 @@ p {
 	text-align: center !important;
 	color: white !important;
 }
+
+.copy-describe {
+    margin: 0 !important;
+	text-align: center !important;
+	color: white !important;
+}
+
+.copy-describe:hover {
+    text-decoration: underline;
+}
