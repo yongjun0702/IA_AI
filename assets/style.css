@@ -39,17 +39,20 @@ header {
 }
 
 @keyframes cursor {
-    0%, 100% { 
-      border-color: #212121; 
+
+    0%,
+    100% {
+        border-color: #212121;
     }
 }
 
 @keyframes text {
-    0% { 
-      width: 0; 
+    0% {
+        width: 0;
     }
-    100% { 
-      width: 15.5ch; 
+
+    100% {
+        width: 15.5ch;
     }
 }
 
@@ -57,6 +60,7 @@ a {
     text-decoration: none;
     color: white;
 }
+
 p {
     margin-top: 5px;
 }
@@ -109,6 +113,7 @@ p {
     margin: 0;
     font-weight: 700;
 }
+
 .title-text h3 {
     white-space: nowrap;
     font-size: 1em;
@@ -116,13 +121,15 @@ p {
     font-weight: 700;
     color: lightskyblue;
 }
+
 .field {
     display: flex;
     align-items: center;
     justify-content: space-around;
     width: 300px;
-  }
-  .scroll {
+}
+
+.scroll {
     width: 50px;
     height: 50px;
     border: 2px solid #333;
@@ -130,44 +137,49 @@ p {
     position: relative;
     animation: down 1.3s infinite;
     -webkit-animation: down 1.3s infinite;
+
     &::before {
-      content: '';
-      position: absolute;
-      top: 10px;
-      left: 14.5px;
-      width: 18px;
-      height: 18px;
-      border-left: 2px solid #333;
-      border-bottom: 2px solid #333;
-      transform: rotate(-45deg);
+        content: '';
+        position: absolute;
+        top: 10px;
+        left: 14.5px;
+        width: 18px;
+        height: 18px;
+        border-left: 2px solid #333;
+        border-bottom: 2px solid #333;
+        transform: rotate(-45deg);
     }
-  }
-  
-  @keyframes down {
+}
+
+@keyframes down {
     0% {
-      transform: translate(0);
+        transform: translate(0);
     }
+
     20% {
-      transform: translateY(17px);
+        transform: translateY(17px);
     }
+
     40% {
-      transform: translate(0);
+        transform: translate(0);
     }
-  }
-  
-  @-webkit-keyframes down {
+}
+
+@-webkit-keyframes down {
     0% {
-      transform: translate(0);
+        transform: translate(0);
     }
+
     20% {
-      transform: translateY(17px);
+        transform: translateY(17px);
     }
+
     40% {
-      transform: translate(0);
+        transform: translate(0);
     }
-  }
-  
-  
+}
+
+
 .content-section {
     padding: 80px 20px;
     text-align: center;
@@ -194,11 +206,12 @@ p {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.1s ease-in, box-shadow 0.1s ease-in;  /* Adjusted transition speed */
+    transition: transform 0.1s ease-in, box-shadow 0.1s ease-in;
+    /* Adjusted transition speed */
     cursor: pointer;
     width: 250px;
-    position: relative; 
-    overflow: hidden; 
+    position: relative;
+    overflow: hidden;
 }
 
 .card:hover {
@@ -212,8 +225,8 @@ p {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 1000px;
-    position: relative; 
-    overflow: hidden; 
+    position: relative;
+    overflow: hidden;
 }
 
 #searchInput {
@@ -236,7 +249,7 @@ p {
     color: black;
 }
 
-#results > li > a:hover {
+#results>li>a:hover {
     text-decoration: underline;
 }
 
@@ -244,25 +257,29 @@ p {
     text-align: left;
 }
 
-#results > li > ul {
+#results>li>ul {
     margin-top: 6px;
     padding-left: 30px;
 }
-#results > li > ul > li {
+
+#results>li>ul>li {
     margin-top: 6px;
 }
-#results > li > ul > li:nth-child(1) {
+
+#results>li>ul>li:nth-child(1) {
     margin-top: 0;
 }
-#search > .route {
+
+#search>.route {
     margin-top: 20px;
     margin-left: 120px;
     margin-right: 120px;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: center; 
+    justify-content: center;
 }
-#results > li {
+
+#results>li {
     margin-top: 8px;
 }
 
@@ -276,16 +293,18 @@ p {
 .card h3 {
     font-weight: 700;
 }
+
 .lounge-card {
     background: white;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.1s ease-in, box-shadow 0.1s ease-in;  /* Adjusted transition speed */
+    transition: transform 0.1s ease-in, box-shadow 0.1s ease-in;
+    /* Adjusted transition speed */
     cursor: pointer;
     width: 250px;
-    position: relative; 
-    overflow: hidden; 
+    position: relative;
+    overflow: hidden;
 }
 
 .lounge-card:hover {
@@ -308,12 +327,13 @@ p {
     background: white;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.1s ease-in, box-shadow 0.1s ease-in;  /* Adjusted transition speed */
+    transition: transform 0.1s ease-in, box-shadow 0.1s ease-in;
+    /* Adjusted transition speed */
     cursor: pointer;
     width: 250px;
     height: 350px;
-    position: relative; 
-    overflow: hidden; 
+    position: relative;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -346,6 +366,7 @@ p {
     transform: translateY(-10px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
+
 /* Modal 스타일 추가 */
 .modal {
     display: none;
@@ -370,7 +391,8 @@ p {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     animation: fadeIn 0.5s;
     position: relative;
-    text-align: center; /* 추가 */
+    text-align: center;
+    /* 추가 */
 }
 
 .close {
@@ -398,14 +420,20 @@ p {
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 @keyframes fadeInImage {
     0% {
         opacity: 0;
     }
+
     100% {
         opacity: 1;
     }
@@ -416,6 +444,7 @@ p {
         opacity: 0;
         transform: translate(-50%, -100%);
     }
+
     100% {
         opacity: 1;
         transform: translate(-50%, -50%);
@@ -426,10 +455,11 @@ p {
     .title-text h1 {
         font-size: 1.8em;
     }
+
     .title-text h3 {
         font-size: -0.8em;
     }
-    
+
 
     nav ul li {
         display: block;
@@ -440,10 +470,12 @@ p {
         width: 100%;
         margin: 10px 0;
     }
+
     .lounge-card {
         width: 100%;
         margin: 10px 0;
     }
+
     .locker-card {
         width: calc(100% - 20px);
         margin: 10px 0;
@@ -466,7 +498,7 @@ p {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: center; 
+    justify-content: center;
 }
 
 .route img {
@@ -493,6 +525,7 @@ p {
     font-weight: 700;
     color: black;
 }
+
 .route-text p {
     font-size: 1em;
     margin: 0;
@@ -501,8 +534,8 @@ p {
 
 @media (max-width: 1200px) {
     .route.except {
-        flex-direction: column; 
-        align-items: center; 
+        flex-direction: column;
+        align-items: center;
         margin-left: 10px;
         margin-right: 10px;
     }
@@ -517,13 +550,13 @@ p {
     .route-text {
         font-size: 1em;
         text-align: center;
-        margin-right: 0; 
+        margin-right: 0;
         margin-left: 0;
     }
 }
 
 @media (max-width: 1050px) {
-    #search > .route {
+    #search>.route {
         align-items: center;
         margin-left: 10px;
         margin-right: 10px;
@@ -531,29 +564,62 @@ p {
 }
 
 
-.copyright-footer{
-	padding-top: 3rem !important;
-	padding-bottom: 3rem !important;
-	background-color: black !important;
+.copyright-footer {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+    background-color: black !important;
 }
 
-.copyright-div{
-	padding-right: 3rem !important;
-	padding-left: 3rem !important;
+.copyright-div {
+    padding-right: 3rem !important;
+    padding-left: 3rem !important;
 }
 
-.copyright-p{
-	margin: 0 !important;
-	text-align: center !important;
-	color: white !important;
+.copyright-p {
+    margin: 0 !important;
+    text-align: center !important;
+    color: white !important;
 }
 
 .copy-describe {
     margin: 0 !important;
-	text-align: center !important;
-	color: white !important;
+    text-align: center !important;
+    color: white !important;
 }
 
 .copy-describe:hover {
     text-decoration: underline;
+}
+
+/* dev 소개 페이지 */
+.content-section.dev {
+    padding: 80px 20px;
+    text-align: center;
+    opacity: 100%;
+    transform: none;
+    transition: none;
+    flex: 1 0 auto;
+}
+
+.dev>.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.dev.footer {
+    width: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 0;
+    flex-shrink: 0;
+}
+
+body.dev {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
