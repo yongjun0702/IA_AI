@@ -32,7 +32,8 @@ header {
 }
 
 .typewriter {
-    width: 15.5em;
+    /* width: 15.5em; */
+    padding-right: 12px;
     white-space: nowrap;
     overflow: hidden;
     border-right: 4px solid #212121;

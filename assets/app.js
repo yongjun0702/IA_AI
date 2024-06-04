@@ -111,6 +111,6 @@ swiftUpElements.forEach(elem => {
 
     const children = document.querySelectorAll('span > i');
     children.forEach((node, index) => {
-        node.style.animationDelay = `${index * .4}s`;
+        node.style.animationDelay = `${index * .2}s`;
     });
 });
